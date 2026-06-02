@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JERSSY portfolio</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<script>
+const elements = document.querySelectorAll('.project-card, .content, .about-text');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+        }
+    });
+});
+
+elements.forEach(el => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(40px)";
+    el.style.transition = "0.8s ease";
+    observer.observe(el);
+});
+</script>
+
+<body>
+
+    <header> 
+        <div class="logo">JERSSY</div>
+        <nav>
+            <ul>
+                <li><a href="acceuil1.html" class="active">Home</a></li>
+                <li><a href="about me .html">About Me</a></li>
+                <li><a href="projets.html">projets</a></li>
+                <li><a href="conctact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <a href="whatsapp" class="btn">Let's Talk</a>
+    </header>
+
+    <section class="hero">
+        <div class="content">
+        
+
+            <h1>
+                hello , moi<br>
+                c'est <span> JERSSY youmsi</span>  <br>
+                etudiante en genie <br>
+                informatique
+            </h1>
+            <h3><p class="active">
+                 etudiante a l'iut de douala; je suis passionne par le devellopement web
+                ,les bases de donnes et la programmation en python
+        
+            </p></h3>
+
+            <div class="profile">
+                <div class="avatar">E</div>
+                <div>
+                    <h4>JERSSY youmsi</h4>
+                    <span>ingenieur</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-box">
+            <img src="t.jpeg"
+                alt="jerssy">
+        </div>
+    </section>
+    <section id="a-propos">
+        
+        <div class="reveal">
+            <h1> <p class="section-label"> A PROPOS
+            </p></h1>
+            <h2 class="se ction-title"> Qui <em>suis-je</em>
+            </h2>
+        </div>
+        <div class="content reveal">
+            <div class="about-text">
+                <div class="divider"></div>
+                <p>
+                    etudiante en genie informatique, je devellope des expertise solides  dans la conception dw systhemes ,le devellopement logiciel et les nouvelles technologies cloud. mon parcours academique m'a permis d'acquuerir des bases rigoureuses en achitectures des ordinareurs ,virtualisation
+                </p>
+                <p>
+                    je suis annime par la conviction que la technnologie doit etre a la fois performante et humaine .j'aie resoudre des problemes complexes av4ec solutions simples
+                </p>
+                <p>
+                    en dehors des cours ,je contribue a des  projets open sources et je me passionne pour le design interfaces et l'experiences utilisateur
+                </p>
+                <div class="skills-grid" style="margin-top: 2rem;">
+                </div>
+                <div class="skill-items"><span class="skill-dot"></span>python. c . java </div>
+                <div class="skill-items"><span class="skill-dot"></span>docker. kubernetes </div>
+                <div class="skill-items"><span class="skill-dot"></span>reseauX $ securites</div>
+                <div class="skill-items"><span class="skill-dot"></span>linux / systhemes</div>
+                <div class="skill-items"><span class="skill-dot"></span>cloud et virtualisation </div>
+                <div class="skill-items"><span class="skill-dot"></span>bases de donnes sql </div>
+                <div class="skill-items"><span class="skill-dot"></span>git $ ci / cd</div>
+            </div>
+        </div>
+        </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    
+ <section class="projects-section">
+        <div class="container">
+            <h1>Mes Projets</h1><h2><p class="subtitle">
+                Découvrez quelques réalisations qui illustrent mes compétences en développement web et design.
+            </p>
+            </h2>
+
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <img src="p2.webp" alt="Projet 1">
+                    <div class="project-content">
+                        <h3>Site E-commerce</h3>
+                        <p>Création d'une boutique en ligne moderne avec gestion des produits et paiements sécurisés.</p>
+                        <a href="#" class="btn">Voir le projet</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="p1.webp" alt="Projet 2">
+                    <div class="project-content">
+                        <h3>Application de Gestion</h3>
+                        <p>Développement d'une application de suivi des tâches et de gestion d'équipe.</p>
+                        <a href="#" class="btn">Voir le projet</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="mk.png" alt="Projet 3">
+                    <div class="project-content">
+                        <h3>Portfolio Créatif</h3>
+                        <p>Conception d'un portfolio moderne et responsive pour un designer graphique.</p>
+                        <a href="#" class="btn">Voir le projet</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="p3.webp" alt="Projet 4">
+                    <div class="project-content">
+                        <h3>Application Mobile</h3>
+                        <p>Interface intuitive permettant la gestion des événements et des notifications.</p>
+                        <a href="#" class="btn">Voir le projet</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="s.png" alt="Projet 5">
+                    <div class="project-content">
+                        <h3>Dashboard Analytique</h3>
+                        <p>Tableau de bord interactif avec visualisation des données en temps réel.</p>
+                        <a href="#" class="btn">Voir le projet</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="ny.png" alt="Projet 6">
+                    <div class="project-content">
+                        <h3>Plateforme Éducative</h3>
+                        <p>Solution d'apprentissage en ligne avec cours, quiz et suivi des progrès.</p>
+                        <a href="#" class="btn">Voir le projet</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+<section class="contact-page">
+
+        <div class="header">
+            <h1>Contact</h1>
+            <h2><p>N'hésitez pas à me contacter pour discuter de vos projets ou collaborations.</p></h2>
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <h2>Mes Coordonnées</h2>
+
+                <div class="info-box">
+                    <h3>Téléphone</h3>
+                    <p>+237 6 92 41 84 65</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>Email</h3>
+                    <p>youmsijerssy@icloud.com</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>Adresse</h3>
+                    <p>Douala, Cameroun</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Envoyez un message</h2>
+
+                <form>
+                    <input type="text" placeholder="Votre nom" required>
+
+                    <input type="email" placeholder="Votre email" required>
+
+                    <input type="text" placeholder="Sujet" required>
+
+                    <textarea placeholder="Votre message" rows="6" required></textarea>
+
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
